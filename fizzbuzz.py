@@ -1,18 +1,21 @@
-def fizzbuzz(listName):
+def fizzbuzz(numList):
     
-    for x in listName:
+    for x in numList:
 
-        if (x%3==0 and x%5==0):
-            print("fizzbuzz")
+        fb =""
+        
+        if (x%3!=0 and x%5!=0):
+            fb = str(x)
 
-        elif (x%3==0):
-            print("fizz")
+        if (x%3==0):
+            fb ="fizz"
 
-        elif (x%5==0):
-            print("buzz")
+        if (x%5==0):
+            fb += "buzz"            
 
-        else:
-            print(x)
+        print(fb)
 
-numList = list(range(1, 101))
-fizzbuzz(numList)
+
+numRange = list(range(1, 101))
+
+fizzbuzz(numRange)
